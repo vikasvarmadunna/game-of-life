@@ -7,7 +7,7 @@ pipeline{
         }
         }
         stage('learning'){
-            agent { label: 'jdk-11-mvn' }
+            agent { label 'jdk-11-mvn' }
             steps{
         git url: 'https://github.com/vikasvarmadunna/game-of-life.git', branch: 'amazon'
         }
