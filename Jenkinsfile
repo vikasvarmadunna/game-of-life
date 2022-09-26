@@ -1,11 +1,15 @@
 pipeline{
     agent any
     stages{
-        step('test'){
+        stage('test'){
+            steps{
         sh "echo hello"
         }
-        step('learning'){
+        }
+        stage('learning'){
+            steps{
         git url: 'https://github.com/vikasvarmadunna/game-of-life.git', branch: 'amazon'
+        }
         }
     }
 }
